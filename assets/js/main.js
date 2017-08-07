@@ -42,8 +42,11 @@
         isLoading();
         fillFieldCEP();
         getMessage('sucess');
-        console.log('is all right');
+      } else {
+        getMessage('error');
+        isLoading();
       }
+
     }
 
     function isRequestOk() {
@@ -73,7 +76,7 @@
     function getMessage(type) {
       var message = {
         sucess: "cep encontrado com sucesso",
-        erro: "cep não encontrado"
+        error: "cep não encontrado"
       }
 
       $contentStatus.innerHTML = message[type];

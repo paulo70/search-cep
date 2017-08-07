@@ -27,6 +27,7 @@ input {
 ul {
   border-bottom: 1px solid #676767;
   width: 20%;
+  margin-bottom: 10px;
 }
 
 li {
