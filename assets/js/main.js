@@ -40,7 +40,7 @@
     function handleState() {
       if (isRequestOk()) {
         isLoading();
-        fillFielsCEP();
+        fillFieldCEP();
         getMessage('sucess');
         console.log('is all right');
       }
@@ -50,7 +50,7 @@
       return ajax.readyState === 4 && ajax.status === 200;
     }
 
-    function fillFielsCEP() {
+    function fillFieldCEP() {
       var data = JSON.parse(ajax.responseText);
 
       $cepField.innerHTML = data.cep;
@@ -70,13 +70,13 @@
 
     }
 
-    function getMessage(type){
-    	var message = {
-    		sucess: "cep encontrado com sucesso",
-    		erro: "cep não encontrado"
-    	}
+    function getMessage(type) {
+      var message = {
+        sucess: "cep encontrado com sucesso",
+        erro: "cep não encontrado"
+      }
 
-    	$contentStatus.innerHTML = message[type];
+      $contentStatus.innerHTML = message[type];
     }
 
     return {
